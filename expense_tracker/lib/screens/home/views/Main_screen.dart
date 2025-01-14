@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:expense_tracker/Data.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
@@ -246,7 +247,7 @@ class MainScreen extends StatelessWidget {
                         true, // Makes it compatible with SingleChildScrollView
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: 5, // Mock transactions
-                    itemBuilder: (context, index) {
+                    itemBuilder: (context, i) {
                       return Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Container(
@@ -265,17 +266,18 @@ class MainScreen extends StatelessWidget {
                                         width: 50,
                                         height: 50,
                                         decoration: BoxDecoration(
-                                            color: Colors.yellow[700],
+                                            color: transactionsData[i]['color'],
                                             shape: BoxShape.circle),
-                                        child: Icon(Icons.breakfast_dining),
+                                        
                                       ),
+                                      transactionsData[i]['icon']
                                     ],
                                   ),
                                   const SizedBox(
                                     width: 12,
                                   ),
                                   Text(
-                                    "Food",
+                                    transactionsData[i]['name'],
                                     style: TextStyle(
                                       fontSize: 14,
                                       color:
@@ -289,7 +291,7 @@ class MainScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Text(
-                                    "45.00",
+                                    transactionsData[i]['totalAmount'],
                                     style: TextStyle(
                                       fontSize: 14,
                                       color: Theme.of(context)
@@ -299,7 +301,7 @@ class MainScreen extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "Today",
+                                    transactionsData[i]['date'],
                                     style: TextStyle(
                                       fontSize: 14,
                                       color:
