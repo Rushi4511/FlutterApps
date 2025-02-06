@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:home_rental_app_ui/screens/screen1.dart';
-import 'package:home_rental_app_ui/screens/screen2.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,6 +11,6 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: Screen2());
+        debugShowCheckedModeBanner: false, home: Screen1());
   }
 }
