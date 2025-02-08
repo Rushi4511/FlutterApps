@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:petcare_app_ui/screens/screen3.dart';
 
 class Screen2 extends StatefulWidget {
   const Screen2({super.key});
@@ -172,19 +173,27 @@ class _Screen2State extends State<Screen2> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      height: 40,
-                      width: 375,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(245, 146, 69, 1),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Text(
-                        "LOGIN",
-                        style: GoogleFonts.poppins(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: Color.fromRGBO(255, 255, 255, 1),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return Screen3();
+                        }));
+                      },
+                      child: Container(
+                        height: 40,
+                        width: 375,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            color: Color.fromRGBO(245, 146, 69, 1),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Text(
+                          "LOGIN",
+                          style: GoogleFonts.poppins(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Color.fromRGBO(255, 255, 255, 1),
+                          ),
                         ),
                       ),
                     ),

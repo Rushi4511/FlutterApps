@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:petcare_app_ui/screens/screen1.dart';
 import 'package:petcare_app_ui/screens/screen2.dart';
+import 'package:petcare_app_ui/screens/screen3.dart';
 
 void main() {
   runApp(const MainApp());
