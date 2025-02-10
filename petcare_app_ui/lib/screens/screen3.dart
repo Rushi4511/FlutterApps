@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:petcare_app_ui/screens/screen4.dart';
+import 'package:petcare_app_ui/screens/screen5%20.dart';
 
 class Screen3 extends StatefulWidget {
   const Screen3({super.key});
@@ -73,10 +75,18 @@ class _Screen3State extends State<Screen3> {
                         ],
                       ),
                       const Spacer(),
-                      Icon(
-                        Icons.notifications,
-                        size: 35,
-                        color: Colors.black,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return Screen4();
+                          }));
+                        },
+                        child: Icon(
+                          Icons.notifications,
+                          size: 35,
+                          color: Colors.black,
+                        ),
                       )
                     ],
                   ),
@@ -202,27 +212,37 @@ class _Screen3State extends State<Screen3> {
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            category[index % 4]["image"]!,
-                            width: 95,
-                            height: 85,
-                            fit: BoxFit.cover,
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Text(
-                            category[index % 4]["name"]!,
-                            style: GoogleFonts.poppins(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.blueGrey),
-                          ),
-                        ],
+                    return GestureDetector(
+                      onTap: () {
+                        if (category[index % 4]['name'] == "Training") {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return Screen5();
+                          }));
+                        }
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              category[index % 4]["image"]!,
+                              width: 95,
+                              height: 85,
+                              fit: BoxFit.cover,
+                            ),
+                            const SizedBox(
+                              height: 15,
+                            ),
+                            Text(
+                              category[index % 4]["name"]!,
+                              style: GoogleFonts.poppins(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.blueGrey),
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   },
