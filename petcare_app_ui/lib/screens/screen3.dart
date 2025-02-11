@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:petcare_app_ui/screens/screen4.dart';
 import 'package:petcare_app_ui/screens/screen5.dart';
+import 'package:petcare_app_ui/screens/screen7.dart';
 import 'package:petcare_app_ui/screens/screen9.dart';
 
 class Screen3 extends StatefulWidget {
@@ -220,6 +221,16 @@ class _Screen3State extends State<Screen3> {
                               MaterialPageRoute(builder: (context) {
                             return Screen9();
                           }));
+                        } else if (category[index % 4]['name'] == "Veternary") {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return Screen5();
+                          }));
+                        } else if (category[index % 4]['name'] == "Grooming") {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return Screen7();
+                          }));
                         }
                       },
                       child: Padding(
@@ -426,11 +437,7 @@ class _Screen3State extends State<Screen3> {
           ),
           BottomNavigationBarItem(
             icon: IconButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return Screen5();
-                  }));
-                },
+                onPressed: () {},
                 icon: Icon(
                   Icons.favorite_outline,
                 )),
