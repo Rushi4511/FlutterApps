@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:petcare_app_ui/screens/screen3.dart';
+import 'package:petcare_app_ui/screens/screen6.dart';
 
 class Screen5 extends StatefulWidget {
   const Screen5({super.key});
@@ -229,12 +231,23 @@ class _Screen5State extends State<Screen5> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const SizedBox(height: 20),
-                              Text(
-                                specialists[index]["name"]!,
-                                style: GoogleFonts.poppins(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,
+                              GestureDetector(
+                                onTap: () {
+                                  if (specialists[index]["name"] ==
+                                      "Dr. Anna Johanson") {
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return Screen6();
+                                    }));
+                                  }
+                                },
+                                child: Text(
+                                  specialists[index]["name"]!,
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                  ),
                                 ),
                               ),
                               const SizedBox(height: 5),
@@ -315,7 +328,13 @@ class _Screen5State extends State<Screen5> {
         iconSize: 30,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
+            icon: IconButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Screen3();
+                  }));
+                },
+                icon: Icon(Icons.home_outlined)),
             label: "Home",
           ),
           BottomNavigationBarItem(

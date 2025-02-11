@@ -20,7 +20,7 @@ class _Screen1State extends State<Screen1> {
               top: 300,
               left: 90,
               child: GestureDetector(
-                onDoubleTap: () {
+                onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return Screen2();
                   }));

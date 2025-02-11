@@ -4,6 +4,7 @@ import 'package:petcare_app_ui/screens/screen2.dart';
 import 'package:petcare_app_ui/screens/screen3.dart';
 import 'package:petcare_app_ui/screens/screen4.dart';
 import 'package:petcare_app_ui/screens/screen5.dart';
+import 'package:petcare_app_ui/screens/screen6.dart';
 import 'package:petcare_app_ui/screens/screen9.dart';
 
 void main() {
@@ -16,6 +17,6 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: Screen3());
+        debugShowCheckedModeBanner: false, home: Screen1());
   }
 }
