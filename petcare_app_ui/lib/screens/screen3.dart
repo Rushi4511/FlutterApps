@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:petcare_app_ui/screens/screen4.dart';
-import 'package:petcare_app_ui/screens/screen5%20.dart';
+import 'package:petcare_app_ui/screens/screen5.dart';
+import 'package:petcare_app_ui/screens/screen9.dart';
 
 class Screen3 extends StatefulWidget {
   const Screen3({super.key});
@@ -217,7 +218,7 @@ class _Screen3State extends State<Screen3> {
                         if (category[index % 4]['name'] == "Training") {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return Screen5();
+                            return Screen9();
                           }));
                         }
                       },
@@ -416,12 +417,24 @@ class _Screen3State extends State<Screen3> {
         iconSize: 30,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
+            icon: IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.home_outlined,
+                )),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_outline),
-            label: "Search",
+            icon: IconButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Screen5();
+                  }));
+                },
+                icon: Icon(
+                  Icons.favorite_outline,
+                )),
+            label: "Services",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.history),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Screen5 extends StatefulWidget {
-  const Screen5({super.key});
+class Screen9 extends StatefulWidget {
+  const Screen9({super.key});
 
   @override
-  State<Screen5> createState() => _Screen5State();
+  State<Screen9> createState() => _Screen9State();
 }
 
-class _Screen5State extends State<Screen5> {
+class _Screen9State extends State<Screen9> {
   List<Map<String, String>> training = [
     {
       "image": "assets/images/training1.png",
