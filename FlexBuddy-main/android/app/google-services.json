@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "199263803700",
+    "project_id": "flexbuddy-13124",
+    "storage_bucket": "flexbuddy-13124.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199263803700:android:d6f50cf7840c785fd1ad61",
+        "android_client_info": {
+          "package_name": "com.example.flex_buddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnh27vfBlGZ6s6ZFS9SgrjNxR005UOZB8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
