@@ -83,3 +83,27 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     );
   }
 }
+
+
+/*
+  static List<Color> _getGradientColors(SnackbarType type) {
+    switch (type) {
+      case SnackbarType.success:
+        return [
+          const Color(0xFF00B09B),
+          const Color(0xFF96C93D),
+        ];
+      case SnackbarType.error:
+        return [
+          const Color(0xFFFF416C),
+          const Color(0xFFFF4B2B),
+        ];
+      case SnackbarType.info:
+        return [
+          const Color(0xFF896CFE),
+          const Color(0xFF6C63FF),
+        ];
+    }
+  }
+
+  */
